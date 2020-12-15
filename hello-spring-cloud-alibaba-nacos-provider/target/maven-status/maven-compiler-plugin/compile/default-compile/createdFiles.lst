@@ -1,0 +1,5 @@
+com\hui\provider\ProviderApplication.class
+com\hui\provider\test\TestEntity.class
+com\hui\provider\test\TestController.class
+com\hui\provider\test\TestService.class
+com\hui\provider\test\TestVo.class
