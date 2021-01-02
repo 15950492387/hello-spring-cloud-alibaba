@@ -21,12 +21,14 @@ public class TestController {
 
     @GetMapping(value = "/{message}")
     public String test(@PathVariable String message) {
+        int i = 1/0;
         return "Hello Nacos Discovery " + message + " i am from port " + port;
     }
 
     // 从上下文中读取配置
     @GetMapping(value = "/hi")
     public String sayHi() {
+        int i = 1/0;
         return "Hello " + applicationContext.getEnvironment().getProperty("user.name");
     }
 

@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "provider")
+@FeignClient(qualifier="provider", name = "provider", fallback = ProvideTestCallBack.class)
 public interface ProvideTestFegin {
 
     @GetMapping(value = "/test/hi")
