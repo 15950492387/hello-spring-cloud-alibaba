@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>信息列表</title>
+	<script src="js/xdapp.js"></script>
+	<style>
+		.button:hover {
+			background-color: #87CEFA
+		}
+
+		.button:active {
+			background-color: #87CEFA;
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
+		}
+
+		.el-table .selectedstyle {
+			background-color: #bfc5cc;
+		}
+
+		.el-table .cell {
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		.el-table td,
+		.el-table th {
+			padding: 4px 0px;
+		}
+
+		.el-table--border td,
+		.el-table--border th {
+			border-right: 1px solid #747882;
+		}
+
+		.el-table td,
+		.el-table th.is-leaf {
+			border-bottom: 1px solid #747882;
+		}
+
+		.el-autocomplete-suggestion {
+			width: auto !important;
+		}
+		.el-autocomplete {
+			width: 90% !important;
+		}
+		.el-icon-search {
+			min-width: 14% !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wireRod">
+		<div>
+			<el-date-picker @change="changeDate" value-format="yyyy-MM-dd" v-model="dbilldate" type="date"
+				placeholder="选择日期">
+			</el-date-picker>
+			<el-select v-model="applyOrg" placeholder="请选择分厂" @change="changeOrg" clearable>
+				<el-option v-for="item in orgs" :key="item.pk_calbody" :label="item.bodyname" :value="item.pk_calbody">
+				</el-option>
+			</el-select>
+			<el-cascader :key="cascaderKey" @change="changeDate" placeholder="请选择部门" filterable style="width: 500px;" v-model="departKeys"
+				:options="depart" :props="{ checkStrictly: true, label: 'deptname', value: 'pkDeptdoc' }" clearable>
+			</el-cascader>
+			<el-button type="primary" @click="add">增加</el-button>
+		</div>
+		<!-- 库存的表格 -->
+		<el-table highlight-current-row v-loading="loadingDepot" :header-cell-style="headerStyle" size="mini"
+			:data="stockData" :height="tableHeight / 2 - 23" border @row-click="depotRowClick"
+			style="width: 100%; margin-bottom: 5px;">
+			<el-table-column prop="calbody.bodyname" label="申请库存分厂" align="center">
+			</el-table-column>
+			<el-table-column prop="vbillcode" label="申请单号" align="center">
+			</el-table-column>
+			<el-table-column prop="dbilldate" label="申请日期" align="center">
+				<!-- 需要确认 -->
+			</el-table-column>
+			<!-- <el-table-column prop="" label="申请人" align="center">
+			</el-table-column> -->
+			<el-table-column prop="deptDoc.deptname" label="申请部门" align="center">
+			</el-table-column>
+			<!-- <el-table-column prop="" label="备注" align="center">
+			</el-table-column> -->
+			<el-table-column prop="totalnum" label="总数量" align="center">
+			</el-table-column>
+			<el-table-column prop="defDoc.docname" label="班次" align="center">
+			</el-table-column>
+			<!-- <el-table-column prop="" label="收发类别" align="center">
+			</el-table-column> -->
+			<el-table-column prop="psnOperator.userName" label="制单人" align="center">
+			</el-table-column>
+			<el-table-column prop="tmaketime" label="制单时间" align="center">
+			</el-table-column>
+			<el-table-column prop="psnModifier.userName" label="最后修改人" align="center">
+			</el-table-column>
+			<el-table-column prop="modifiedtime" label="最后修改时间" align="center">
+			</el-table-column>
+			<el-table-column prop="psnApprover.userName" label="审批人" align="center">
+			</el-table-column>
+			<el-table-column prop="dapprovedate" label="审批时间" align="center">
+			</el-table-column>
+		</el-table>
+		<!-- 详细信息的表格 -->
+		<el-table :header-cell-style="headerDetailStyle" size="mini" :data="detailData" :height="tableHeight / 2 - 23"
+			border style="width: 100%;">
+			<el-table-column prop="crowno" label="行号" align="center">
+			</el-table-column>
+			<!-- <el-table-column prop="" label="机床号" align="center">
+			</el-table-column> -->
+			<el-table-column prop="invbasdoc.pkInvbasdoc" label="存货编码" align="center">
+			</el-table-column>
+			<el-table-column prop="invbasdoc.invname" label="存货名称" align="center">
+			</el-table-column>
+			<el-table-column prop="invbasdoc.invspec" label="规格" align="center">
+			</el-table-column>
+			<el-table-column prop="invbasdoc.invtype" label="型号" align="center">
+			</el-table-column>
+			<!-- <el-table-column prop="" label="现存量" align="center">
+			</el-table-column> -->
+			<el-table-column prop="applynum" label="申请数量" align="center">
+			</el-table-column>
+			<el-table-column prop="appcastnum" label="申请辅数量" align="center">
+			</el-table-column>
+			<el-table-column prop="invbasdoc.measdoc.measname" label="辅单位" align="center">
+			</el-table-column>
+			<!-- <el-table-column prop="" label="行备注" align="center">
+			</el-table-column>
+			<el-table-column prop="" label="是否试用" align="center">
+			</el-table-column> -->
+			<!-- <el-table-column prop="" label="项目" align="center">
+			</el-table-column>
+			<el-table-column prop="" label="自由项" align="center">
+			</el-table-column>
+			<el-table-column prop="" label="累计出库数量" align="center">
+			</el-table-column> -->
+		</el-table>
+
+		<el-dialog title="出库申请" :visible.sync="dialogVisible" width="90%" :before-close="handleClose">
+			<el-form label-width="70px" :model="form">
+				<el-row :gutter="20" style="width: 98%">
+					<!-- <el-col :span="6">
+						<el-form-item label="申请库存分厂">
+							<el-select v-model="form.applyOrg" placeholder="请选择分厂" @change="changeOrg" clearable>
+								<el-option v-for="item in orgs" :key="item.pk_calbody" :label="item.bodyname" :value="item.pk_calbody">
+								</el-option>
+							</el-select>
+						</el-form-item>
+					</el-col> -->
+					<el-col :span="6">
+						<el-form-item label="申请日期">
+							<el-date-picker value-format="yyyy-MM-dd" v-model="form.applyDate" type="date"
+								placeholder="选择申请日期" style="width: 100%">
+							</el-date-picker>
+						</el-form-item>
+					</el-col>
+					<el-col :span="6">
+						<el-form-item label="申请部门">
+							<!-- form.applyDepart 替换-->
+							<el-cascader :show-all-levels="false" filterable v-model="departKeys" :options="depart"
+								:props="{ checkStrictly: true, label: 'deptname', value: 'pkDeptdoc' }" clearable
+								style="width: 100%">
+							</el-cascader>
+						</el-form-item>
+					</el-col>
+					<el-col :span="6">
+						<el-form-item label="班次">
+							<el-select v-model="form.applyDef" placeholder="请选择班次" style="width: 100%">
+								<el-option :key="'0001B210000000046GIV'" :label="'甲'" :value="'0001B210000000046GIV'">
+								</el-option>
+								<el-option :key="'0001B210000000046GIW'" :label="'乙'" :value="'0001B210000000046GIW'">
+								</el-option>
+								<el-option :key="'0001B210000000046GIX'" :label="'丙'" :value="'0001B210000000046GIX'">
+								</el-option>
+								<el-option :key="'0001B21000000005HC2F'" :label="'长白班'" :value="'0001B21000000005HC2F'">
+								</el-option>
+							</el-select>
+							<!-- <el-input v-model="form.applyDef"></el-input> -->
+						</el-form-item>
+					</el-col>
+					<el-col :span="6">
+						<el-form-item>
+							<el-button type="primary" size="mini" @click="addRow">新增</el-button>
+						</el-form-item>
+					</el-col>
+				</el-row>
+			</el-form>
+
+			<el-table :header-cell-style="headerAddStyle" size="mini" :data="addData" :height="tableHeight / 2" border
+				style="width: 100%">
+				<el-table-column prop="crowno" label="行号" align="center">
+					<template slot-scope="scope">
+						{{ (scope.$index + 1) * 10 }}
+					</template>
+				</el-table-column>
+				<!-- <el-table-column prop="" label="机床号" align="center">
+				</el-table-column> -->
+				<el-table-column prop="invbasdoc.pkInvbasdoc" label="存货编码" align="center" width="250">
+					<template slot-scope="scope">
+						<invcompose1 :invclcode="'0113'" @invselect="(val) => {invselect(val, scope)}"
+							@invselectitem="(val) => {invselectItem(val, scope)}"
+							v-model="scope.row.invbasdoc.pkInvbasdoc"></invcompose1>
+					</template>
+				</el-table-column>
+				<el-table-column prop="invbasdoc.invname" label="存货名称" align="center">
+				</el-table-column>
+				<el-table-column prop="invbasdoc.invspec" label="规格" align="center">
+				</el-table-column>
+				<el-table-column prop="invbasdoc.invtype" label="型号" align="center">
+				</el-table-column>
+				<el-table-column prop="" label="现存量" align="center">
+				</el-table-column>
+				<el-table-column prop="applynum" label="申请数量" align="center">
+					<template slot-scope="scope">
+						<el-input v-model="scope.row.applynum"></el-input>
+					</template>
+				</el-table-column>
+				<el-table-column prop="appcastnum" label="申请辅数量" align="center">
+				</el-table-column>
+				<el-table-column prop="pkInvbasdoc.measdoc.measname" label="辅单位" align="center">
+					<template slot-scope="scope">
+						{{ '卷' }}
+						<!-- 临时先使用卷 -->
+					</template>
+				</el-table-column>
+				<!-- <el-table-column prop="" label="行备注" align="center">
+				</el-table-column>
+				<el-table-column prop="" label="是否试用" align="center">
+				</el-table-column>
+				<el-table-column prop="" label="项目" align="center">
+				</el-table-column>
+				<el-table-column prop="" label="自由项" align="center">
+				</el-table-column>
+				<el-table-column prop="" label="累计出库数量" align="center">
+				</el-table-column> -->
+				<el-table-column prop="operate" label="操作" align="center">
+					<template slot-scope="scope">
+						<el-button type="pirmary" size="mini" @click="deleteRow(scope.$index)"> 删除</el-button>
+					</template>
+				</el-table-column>
+			</el-table>
+			<span slot="footer" class="dialog-footer">
+				<el-button @click="dialogVisible = false">取 消</el-button>
+				<el-button type="primary" @click="submit">确 定</el-button>
+			</span>
+		</el-dialog>
+	</div>
+	<script>
+		loadmodule(["sinpsn.js"])
+	</script>
+	<script src="js/components/invcompose1.js"></script>
+	<script>
+		var getLastDayDate = () => {
+			let date = new Date()
+			date.setTime(date.getTime() - 24 * 60 * 60 * 1000)
+			return date.format('yyyy-MM-dd')
+		}
+		var wireRod = new Vue({
+			el: "#wireRod",
+			computed: {
+				departKey() {
+					if (this.departKeys && this.departKeys.length > 0) {
+						return this.departKeys[this.departKeys.length - 1]
+					}
+					return ''
+				}
+			},
+			filters: {
+			},
+			data: {
+				cascaderKey: 0, //级联标签的key值
+				applyOrg: '', // 分厂
+				loadingDepot: false, //库存的加载显示 
+				saveLoading: false,
+				stockData: [], //库存的信息
+				detailData: [], // 库存的详细信息
+				addData: [], // 新增的页面信息
+				addDataDetail: {
+					crowno: '',
+					data1: '',
+					invbasdoc: {
+						pkInvbasdoc: '',
+						invname: '',
+						invspec: '',
+						invtype: '',
+						data2: '',
+						measdoc: {
+							measname: ''
+						}
+					},
+					applynum: '',
+					appcastnum: ''
+				}, // 新增得项目得模板
+				tableHeight: 0, // 页面的高度
+				dbilldate: '',
+				dialogVisible: false,
+				depart: [], // 部门的信息
+				departCopy: [], // 复制的部门信息
+				departKeys: ['1001AA100000000DBBLU', '1001AA100000000DBBOL', '1001AA100000000DBBPE', '1001B2100000007XTV5H'],
+				form: {
+					// applyOrg: '',
+					applyDate: new Date().format('yyyy-MM-dd'),
+					applyDepart: [],
+					applyDef: ''
+				},
+				dicDef: {
+					'0001B210000000046GIV': '甲',
+					'0001B210000000046GIW': '乙',
+					'0001B210000000046GIX': '丙',
+					'0001B21000000005HC2F': '长白班'
+				},
+				orgs: []
+			},
+			created() {
+				this.tableHeight = document.documentElement.clientHeight
+				this.dbilldate = getLastDayDate()
+				this.init()
+			},
+			mounted() {
+			},
+			methods: {
+				guid() {
+					return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+						var r = Math.random() * 16 | 0,
+							v = c == 'x' ? r : (r & 0x3 | 0x8)
+						return v.toString(16).replace('-', '')
+					})
+				},
+				handleClose() {
+					this.dialogVisible = false
+				},
+				headerStyle({ row, column, rowIndex, columnIndex }) {
+					if (columnIndex == 0 || columnIndex == 2 || columnIndex == 3) {
+						return {
+							color: 'blue',
+							textAlign: 'center'
+						}
+					} else {
+						return {
+							textAlign: 'center'
+						}
+					}
+				},
+				headerDetailStyle({ row, column, rowIndex, columnIndex }) {
+					if (columnIndex == 1 || columnIndex == 5) {
+						return {
+							color: 'blue',
+							textAlign: 'center'
+						}
+					} else {
+						return {
+							textAlign: 'center'
+						}
+					}
+				},
+				headerAddStyle({ row, column, rowIndex, columnIndex }) {
+					if (columnIndex == 1 || columnIndex == 6) {
+						return {
+							color: 'blue',
+							textAlign: 'center'
+						}
+					} else {
+						return {
+							textAlign: 'center'
+						}
+					}
+				},
+				add() {
+					this.dialogVisible = true
+				},
+				submit() {
+					this.save()
+				},
+				findDept() {
+					ly.http.get("/costservice/deptdoc/list")
+						.then(resp => {
+							if (resp.code == 0) {
+								let parent = []
+								let childer = []
+								let result = resp.result
+								result.forEach(depart => {
+									if (!depart.pkFathedept) {
+										parent.push(depart)
+									} else {
+										childer.push(depart)
+									}
+								})
+								parent.forEach(depart => {
+									this.setChildren(depart, childer)
+								})
+								this.depart = parent
+								this.departCopy = JSON.parse(JSON.stringify(parent))
+							}
+						}).catch((err) => {
+							this.$message.error('查询部门信息错误')
+							console.log(err)
+						})
+				},
+				// 递归调用  生成树形结构
+				setChildren(depart, childer) {
+					let pkDeptdoc = depart.pkDeptdoc
+					childer.forEach(childDepart => {
+						let pkFathedept = childDepart.pkFathedept
+						if (pkDeptdoc == pkFathedept) {
+							if (!depart.children) {
+								depart.children = []
+							}
+							depart.children.push(childDepart)
+							this.setChildren(childDepart, childer)
+						}
+					})
+				},
+				// 查询出页面需要的所有信息
+				findAll(departKey) {
+					if (!departKey) {
+						departKey = this.departKey
+					}
+					this.loadingDepot = true
+					ly.http.post("/bcservice/sapply/list", { dbilldate: this.dbilldate, cdptid: departKey })
+						.then(resp => {
+							if (resp.code == 0) {
+								console.log(resp.result)
+								this.stockData = resp.result
+							}
+							this.loadingDepot = false
+						}).catch((err) => {
+							this.$message.error('查询库存信息错误')
+							console.log(err)
+						})
+				},
+				depotRowClick(row, column, event) {
+					this.detailData = row.sapplyBList
+				},
+				findOrgs() {
+					ly.http.get("/ncbase/ncbase/listCalbody?pkCorp=1001")
+						.then(resp => {
+							if (resp.code == 0) {
+								this.orgs = resp.result
+							}
+						}).catch((err) => {
+							this.$message.error('查询分厂信息错误')
+							console.log(err)
+						})
+				},
+				findDeptTwo(val) {
+					this.departKeys = []
+					this.cascaderKey++
+					if (val) {
+						ly.http.get("/costservice/deptdoc/list?pkCalbody=" + val)
+							.then(resp => {
+								if (resp.code == 0) {
+									let parent = []
+									let childer = []
+									let pkDeptdocs = []
+									let result = resp.result
+									result.forEach(depart => {
+										pkDeptdocs.push(depart.pkDeptdoc)
+									})
+									result.forEach(depart => {
+										if (pkDeptdocs.indexOf(depart.pkFathedept) > -1) {
+											childer.push(depart)
+										} else {
+											parent.push(depart)
+										}
+									})
+									parent.forEach(depart => {
+										this.setChildren(depart, childer)
+									})
+									this.depart = parent
+								}
+							}).catch((err) => {
+								this.$message.error('查询部门信息错误')
+								console.log(err)
+							})
+					} else {
+						this.depart = this.departCopy
+					}
+				},
+				changeOrg(val) {
+					this.findDeptTwo(val)
+				},
+				// 增加一行得信息
+				addRow() {
+					this.addData.push(JSON.parse(JSON.stringify(this.addDataDetail)))
+				},
+				deleteRow(index) {
+					this.addData.splice(index, 1)
+				},
+				invselectItem(val, scope) {
+					this.select(val, scope)
+				},
+				invselect(val, scope) {
+					this.select(val, scope)
+				},
+				select(val, scope) {
+					let pk_invbasdoc = val.pk_invbasdoc
+					let row = scope.row
+					let invbasdoc = row.invbasdoc
+					invbasdoc.pkInvbasdoc = pk_invbasdoc
+					row['cinvbasid'] = pk_invbasdoc
+					invbasdoc.invname = val.invname
+					invbasdoc.invspec = val.invspec
+					invbasdoc.invtype = val.invtype
+					invbasdoc.pkMeasdoc = val.pk_measdoc
+					invbasdoc.pkInvcl = val.pkInvcl
+					invbasdoc.invcode = val.invcode
+					invbasdoc.assistunit = 'Y'
+				},
+				// 新增物料的信息
+				save() {
+					this.saveLoading = true
+					let addDataAll = this.addData
+					let form = this.form
+					let totalnum = 0
+					let param = {
+						pkCorp: '1001',
+						pkOrgId: form.applyOrg,
+						dbilldate: form.applyDate,
+						sapplydbilldate: form.applyDate,
+						cdptid: departKey,
+						pkDefdoc1: form.applyDef,
+						vbillcode: 'SA****' + this.guid(),
+						modifiedtime: new Date().format('yyyy-MM-dd HH:mm:ss'),
+						modifier: localStorage.getItem("pk_psnbasdoc"),
+						operator: localStorage.getItem("pk_psnbasdoc"),
+						tmaketime: new Date().format('yyyy-MM-dd HH:mm:ss')
+					}
+					let sapplyBList = []
+					addDataAll.forEach((addData) => {
+						totalnum += parseInt(addData.applynum)
+						let data = {
+							applynum: addData.applynum,
+							appcastnum: addData.appcastnum, // 辅数量-未找到对应
+							cinvbasid: addData.cinvbasid,
+							crowno: addData.crowno,
+							hsl: 1.00000000,
+							isclosed: 'N',
+							invbasdoc: addData.invbasdoc
+						}
+						sapplyBList.push(data)
+					})
+					param['sapplyBList'] = sapplyBList
+					param['totalnum'] = totalnum
+					ly.http.post("/bcservice/sapply/save", param)
+						.then(resp => {
+							this.saveLoading = false
+							this.$message.success('新增成功')
+						}).catch((err) => {
+							this.$message.error('查询分厂信息错误')
+							console.log(err)
+						})
+				},
+				changeDate() {
+					this.findAll()
+				},
+				changeDepart(val) {
+					if (val.length > 0) {
+						this.findAll(val[val.length - 1])
+					} else {
+						this.findAll()
+					}
+				},
+				mypsn(val) {
+					console.log(val)
+				},
+				init() {
+					this.findDept()
+					this.findAll()
+					this.findOrgs()
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

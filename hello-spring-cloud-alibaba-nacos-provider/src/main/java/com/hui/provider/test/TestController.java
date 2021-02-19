@@ -15,21 +15,28 @@ public class TestController {
     @Value("${server.port}")
     private String port;
 
+    @Autowired
+    private TestService testService;
+
     // 注入配置文件上下文
     @Autowired
     private ConfigurableApplicationContext applicationContext;
 
     @GetMapping(value = "/{message}")
     public String test(@PathVariable String message) {
-        int i = 1/0;
         return "Hello Nacos Discovery " + message + " i am from port " + port;
     }
 
     // 从上下文中读取配置
     @GetMapping(value = "/hi")
     public String sayHi() {
-        int i = 1/0;
         return "Hello " + applicationContext.getEnvironment().getProperty("user.name");
+    }
+
+    // 从上下文中读取配置
+    @GetMapping(value = "/limiting/{name}")
+    public String limiting(@PathVariable("name") String name) {
+        return testService.limiting(name);
     }
 
 }
