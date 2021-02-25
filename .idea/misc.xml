@@ -7,6 +7,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/hello-spring-cloud-alibaba-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/pom.xml" />
       </list>
     </option>
   </component>

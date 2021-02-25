@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hello-spring-cloud-alibaba-nacos-provider" />
+        <module name="hello-spring-cloud-alibaba-gateway" />
         <module name="hello-spring-cloud-alibaba-nacos-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hello-spring-cloud-alibaba-dependencies" target="1.8" />
+      <module name="hello-spring-cloud-alibaba-gateway" target="1.8" />
       <module name="hello-spring-cloud-alibaba-nacos-consumer" target="1.8" />
       <module name="hello-spring-cloud-alibaba-nacos-provider" target="1.8" />
       <module name="hello-spring-cloud-alibaba-provider" target="1.8" />
@@ -20,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hello-spring-cloud-alibaba-gateway" options="-parameters" />
       <module name="hello-spring-cloud-alibaba-nacos-consumer" options="-parameters" />
       <module name="hello-spring-cloud-alibaba-nacos-provider" options="-parameters" />
       <module name="hello-spring-cloud-alibaba-provider" options="-parameters" />

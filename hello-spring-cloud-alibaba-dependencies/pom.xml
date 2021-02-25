@@ -5,6 +5,7 @@
     <modules>
         <module>../hello-spring-cloud-alibaba-nacos-provider</module>
         <module>../hello-spring-cloud-alibaba-nacos-consumer</module>
+        <module>../hello-spring-cloud-alibaba-gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -2,141 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae459432-7e7f-42ae-bdc3-fbbda050fa0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/bootstrap-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/patterns/header-profile-skin-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/patterns/header-profile-skin-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/patterns/header-profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/patterns/shattered.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/css/blueimp-gallery-indicator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/css/blueimp-gallery-video.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/css/blueimp-gallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/css/blueimp-gallery.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/play-pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/play-pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/video-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/blueimp/img/video-play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/bootstrap-table/bootstrap-table.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/chosen/chosen-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/chosen/chosen-sprite@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/chosen/chosen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/clockpicker/clockpicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/codemirror/ambiance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/codemirror/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/colorpicker/img/bootstrap-colorpicker/alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/colorpicker/img/bootstrap-colorpicker/hue-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/colorpicker/img/bootstrap-colorpicker/hue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/colorpicker/img/bootstrap-colorpicker/saturation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/cropper/cropper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/dataTables/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/datapicker/WdatePicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/datapicker/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/datapicker/datepicker3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/dropzone/basic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/dropzone/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/duallistbox/bootstrap-duallistbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/footable/fonts/footable.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/footable/fonts/footable.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/footable/fonts/footable.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/footable/fonts/footable.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/footable/footable.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/fullcalendar/fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/fullcalendar/fullcalendar.print.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/iCheck/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/iCheck/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/iCheck/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/images/sprite-skin-flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/images/spritemap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/images/spritemap@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/ionRangeSlider/ion.rangeSlider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jQueryUI/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jQueryUI/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jQueryUI/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jQueryUI/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jQueryUI/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jasny/jasny-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jqgrid/ui.jqgrid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jsTree/32px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jsTree/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/jsTree/throbber.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/markdown/bootstrap-markdown.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/morris/morris-0.4.3.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/multiselect/bootstrap-multiselect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/nouslider/jquery.nouislider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/plyr/plyr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/plyr/sprite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/simditor/simditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/steps/jquery.steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/summernote/summernote-bs3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/summernote/summernote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/sweetalert/sweetalert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/switchery/switchery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/toastr/toastr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/treeview/bootstrap-treeview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/plugins/webuploader/webuploader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/ie.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/img/browser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/img/pb_css_pic_0839f74.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/img/profile_small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/calbody.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/corp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/defdoc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/deptdoc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/invbasdoccp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/invcascader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/invcompose1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/mmpsndoc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/newpsnname.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/project.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/psndoc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/psnname.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/components/reel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/contabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/hplus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/js/xdapp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/welcome.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/static/newWeb/wireRod.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_3_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_9_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_core_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_2_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_multipart_parser_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_stream_storage_1_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/src/main/java/com/hui/hellospringcloudalibabagateway/HelloSpringCloudAlibabaGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-gateway/src/test/java/com/hui/hellospringcloudalibabagateway/HelloSpringCloudAlibabaGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/hello-spring-cloud-alibaba-nacos-provider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/hello-spring-cloud-alibaba-nacos-provider.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/java/com/hui/provider/test/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/java/com/hui/provider/test/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/java/com/hui/provider/test/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/java/com/hui/provider/test/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/target/classes/com/hui/provider/test/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/target/classes/com/hui/provider/test/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/target/classes/com/hui/provider/test/TestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/target/classes/com/hui/provider/test/TestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-dependencies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/src/main/java/com/hui/consumer/test/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/src/main/java/com/hui/consumer/test/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/target/classes/com/hui/consumer/test/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/target/classes/com/hui/consumer/test/TestController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +90,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProviderApplication">
+  <component name="RunManager" selected="Spring Boot.ConsumerApplication">
     <configuration name="ConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hello-spring-cloud-alibaba-nacos-consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hui.consumer.ConsumerApplication" />
@@ -196,7 +98,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+    <configuration name="HelloSpringCloudAlibabaGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hello-spring-cloud-alibaba-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hui.hellospringcloudalibabagateway.HelloSpringCloudAlibabaGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hello-spring-cloud-alibaba-nacos-provider" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hui.provider.ProviderApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -207,6 +116,7 @@
     <list>
       <item itemvalue="Spring Boot.ConsumerApplication" />
       <item itemvalue="Spring Boot.ProviderApplication" />
+      <item itemvalue="Spring Boot.HelloSpringCloudAlibabaGatewayApplication" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -219,6 +129,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -250,6 +165,9 @@
       <workItem from="1611625520619" duration="7251000" />
       <workItem from="1611792447468" duration="33000" />
       <workItem from="1613611037053" duration="6785000" />
+      <workItem from="1613722884443" duration="1139000" />
+      <workItem from="1613973075236" duration="4382000" />
+      <workItem from="1614039686220" duration="7589000" />
     </task>
     <servers />
   </component>
@@ -265,66 +183,70 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="595" y="171" width="744" height="697" key="#ProviderApplication/0.0.1920.1040@0.0.1920.1040" timestamp="1607657173498" />
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607657206133">
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613984206132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607657206133" />
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613984206132" />
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1607840727495">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607840727495" />
+    <state x="689" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1613984126683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613984126683" />
     <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1609477358224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609477358224" />
-    <state width="1621" height="308" key="GridCell.Tab.0.bottom" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.0.bottom" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.0.center" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.0.center" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.0.left" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.0.left" timestamp="1614065809405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.0.right" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809405" />
+    <state width="1621" height="499" key="GridCell.Tab.0.right" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.1.bottom" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.1.bottom" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.1.center" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.1.center" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.1.left" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.1.left" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="308" key="GridCell.Tab.1.right" timestamp="1613638888647">
+    <state width="1621" height="499" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.1.right" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="308" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613638888647" />
-    <state width="1621" height="417" key="GridCell.Tab.2.bottom" timestamp="1613613163342">
+    <state width="1621" height="499" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.2.bottom" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="417" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613613163342" />
-    <state width="1621" height="417" key="GridCell.Tab.2.center" timestamp="1613613163342">
+    <state width="1621" height="499" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.2.center" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="417" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613613163342" />
-    <state width="1621" height="417" key="GridCell.Tab.2.left" timestamp="1613613163342">
+    <state width="1621" height="499" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.2.left" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="417" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613613163342" />
-    <state width="1621" height="417" key="GridCell.Tab.2.right" timestamp="1613613163342">
+    <state width="1621" height="499" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
+    <state width="1621" height="499" key="GridCell.Tab.2.right" timestamp="1614065809406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1621" height="417" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613613163342" />
+    <state width="1621" height="499" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614065809406" />
     <state x="463" y="165" key="SettingsEditor" timestamp="1607652323251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -337,13 +259,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="647" y="275" width="626" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609464823757" />
-    <state x="334" y="224" key="new project wizard" timestamp="1607655357292">
+    <state x="334" y="224" key="new project wizard" timestamp="1614057706320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="224" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607655357292" />
+    <state x="334" y="224" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1614057706320" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609464575821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609464575821" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/src/main/java/com/hui/consumer/test/TestController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

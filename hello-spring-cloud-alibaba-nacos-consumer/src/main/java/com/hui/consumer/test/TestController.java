@@ -1,5 +1,6 @@
 package com.hui.consumer.test;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.hui.consumer.fegin.ProvideTestFegin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,9 +17,12 @@ public class TestController {
     private ProvideTestFegin provideTestFegin;
 
     @GetMapping("testProvider")
-    public String testController() {
+    @SentinelResource("test")
+    public String test() {
         String sayHi = provideTestFegin.sayHi();
         String test = provideTestFegin.test("哇哇哇");
+        String sayHiTwo = provideTestFegin.sayHi();
+        String testTwo = provideTestFegin.test("哇哇哇");
         return "接口一：" + sayHi + "接口二：" + test;
     }
 
