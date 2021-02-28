@@ -12,7 +12,8 @@ spring:
       eager: true
 server:
   port: 9091
-
+  servlet:
+    context-path: /alibaba
 management:
   endpoints:
     web:

@@ -2,6 +2,7 @@ package com.hui.provider.test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RefreshScope
 @RequestMapping("test")
 public class TestController {
 
@@ -37,6 +39,12 @@ public class TestController {
     @GetMapping(value = "/limiting/{name}")
     public String limiting(@PathVariable("name") String name) {
         return testService.limiting(name);
+    }
+
+    // 从上下文中读取配置
+    @GetMapping(value = "/hiYML")
+    public String hiYML() {
+        return "Hello " + applicationContext.getEnvironment().getProperty("user.name");
     }
 
 }
